@@ -5,11 +5,14 @@
         private static Character player;
         private static Item[] inventory;
         private static int ItemCount;
+        private static GameManager? gameManager;
 
         static void Main(string[] args)
         {
-            GameDataSetting();
-            DisplayGameIntro();
+            gameManager = GameManager.Instance();
+            gameManager.GetFileNameList();
+            //GameDataSetting();
+            //DisplayGameIntro();
         }
 
         #region 초기화
